@@ -1,0 +1,184 @@
+/* Reset and variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ffcc00;
+    --secondary-color: #333;
+    --thrid-color: #1d1a1a;
+    --background-color: #fff;
+    --text-color: #000;
+    --font-family: 'Arial, sans-serif';
+    --font-family1: "Raleway", sans-serif;
+    --font-family2: "Open Sans", sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.resume {
+    padding: 20px;
+    background-color: var(--background-color); 
+}
+
+.left-section {
+    background-color: var(--thrid-color);
+    color: var(--background-color);
+    height: 1000px;
+}
+
+.left-section .profile-pic {
+    text-align: center;
+}
+
+.left-section .profile-pic img {
+    width: 374px;
+    height: 350px;
+    object-fit: cover; 
+    max-width: 100%; 
+    overflow: hidden; 
+    position: relative;
+    animation: fadeIn 5s ease-in-out; /* Added animation */
+}
+
+.uidesigner {
+    position: absolute;
+    background-color: #ffcc00;
+    font-family: var(--font-family1);
+    color: #000;
+    font-weight: 700;
+    letter-spacing: 5px;
+    font-size: 17px;
+    border-radius: 2px;
+    left: 90px;
+    top: 330px;
+}
+
+.section {
+    margin: 35px;
+}
+
+h3 {
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 20px;
+    width: 30px;
+    transition: 0.5s;
+}
+
+h3:hover {
+    width: 100%;
+}
+
+.expertise-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.expertise-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.expertise-list span {
+    flex-basis: 30%;
+}
+
+.expertise-bar {
+    flex-basis: 68%;
+    background-color: gray;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 5px;
+}
+
+.expertise-level {
+    height: 10px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+.expertise {
+    background-color: #eff0f0;
+    color: #000;
+    font-family: var(--font-family2);
+    font-weight: 400;
+}
+
+.interests i {
+    margin-right: 8px;
+}
+
+.interests li {
+    display: inline-block;
+    margin-right: 15px;
+    font-family: var(--font-family2);
+}
+
+.contact .row .col-2 {
+    background-color: #ffcc00;
+    font-size: 25px;
+}
+
+.contact {
+    font-family: var(--font-family2);
+    font-weight: 400;
+}
+
+.profile {
+    background-color: #eff0f0;
+    position: absolute;
+    top: 0;
+    animation: slideIn 1s ease-in-out;
+}
+
+.work {
+    position: relative;
+    top: 370px;
+}
+
+@media (max-width: 599px)  {
+    .work{
+        margin-top:100px ;
+    }
+    
+    
+    
+}
+
+.svg h5 {
+    margin-left: 10px;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Keyframes for slide-in animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Applying the slide-in animation to SVG icons */
+.svg img {
+    animation: slideIn 1s ease-in-out;
+}
